@@ -15,5 +15,8 @@ spec:
     path: manifests/helm-app
     repoURL: https://github.com/dandocmando/argocd-helm-test-repo.git
     targetRevision: HEAD
-  syncPolicy: {}
-  
+  syncPolicy:
+    automated:
+      prune: true
+      allowEmpty: true
+      selfHeal: true
